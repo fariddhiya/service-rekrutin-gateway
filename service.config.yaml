@@ -1,0 +1,16 @@
+---
+user:
+  name: user
+  envhost: GRPC_HOST_USER
+  package:
+    - user
+  protoPath:
+    - ../../../../node_modules/fariddhiya-rekrutin-npm/proto/rekrutin/user.proto
+  protoDirsPath:
+    - ../../../../node_modules/fariddhiya-rekrutin-npm/proto/rekrutin
+  routes:
+    user/create:
+      POST:
+        path: user/create
+        service: UserService
+        method: createUser
